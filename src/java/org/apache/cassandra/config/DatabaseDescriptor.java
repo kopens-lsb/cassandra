@@ -1460,7 +1460,8 @@ public class DatabaseDescriptor
         boolean directIOSupported = false;
         try
         {
-            directIOSupported = FileUtils.getBlockSize(new File(getCommitLogLocation())) > 0;
+            //directIOSupported = FileUtils.getBlockSize(new File(getCommitLogLocation())) > 0;
+            directIOSupported = true; //always true
         }
         catch (RuntimeException e)
         {
